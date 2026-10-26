@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The four national parks of Colorado: size, visitation, and a ranger-led tour request form.">
+<title>The Four National Parks of Colorado</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600&family=Public+Sans:wght@400;600&family=Material+Symbols+Outlined&display=swap" rel="stylesheet">
+<style>
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0; border: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+.skip-link {
+  position: absolute;
+  top: -4rem;
+  left: 1rem;
+  padding: .75rem 1.25rem;
+  background: #1f4d3d;
+  color: #fff;
+  transition: top .2s;
+}
+.skip-link:focus { top: 0; }
+
+body {
+  max-width: 70ch;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+  background: #fbf9f4;
+  color: #1c2521;
+  font: 1.125rem/1.7 "Public Sans", sans-serif;
+}
+
+h1, h2, caption, legend, summary {
+  font-family: Bitter, serif;
+  color: #1f4d3d;
+}
+h2 { font-size: 1.5rem; margin-top: 3rem; }
+
+a { color: #1a5c45; }
+:focus-visible { outline: 3px solid #a85318; outline-offset: 2px; }
+
+nav { border-block: 1px solid #ddd6c8; padding: .75rem 0; }
+nav ul { margin: 0; padding-left: 1.25rem; }
+
+.material-symbols-outlined { vertical-align: -.2em; color: #a85318; }
+
+table { border-collapse: collapse; width: 100%; }
+caption { text-align: left; margin-bottom: .5rem; }
+th, td { border-bottom: 1px solid #ddd6c8; padding: .5rem; text-align: left; }
+thead th { background: #eee9dc; }
+td.num { text-align: right; }
+
+details { margin-top: 1rem; }
+
+fieldset { border: 1px solid #ddd6c8; margin: 0 0 1.5rem; padding: 1rem 1.25rem; }
+label { display: block; margin-top: 1rem; font-weight: 600; }
+input, select, textarea {
+  font: inherit;
+  width: 100%;
+  padding: .5rem;
+  border: 1px solid #7a8079;
+  background: #fff;
+}
+.hint { display: block; font-weight: 400; font-size: .95rem; }
+.choice label, .choice input { display: inline; width: auto; font-weight: 400; }
+button {
+  font: inherit;
+  margin-top: 1rem;
+  padding: .75rem 1.5rem;
+  border: 0;
+  background: #1f4d3d;
+  color: #fff;
+}
+
+footer { margin-top: 3rem; border-top: 1px solid #ddd6c8; padding-top: 1.5rem; }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header>
+  <h1>The Four National Parks of Colorado</h1>
+  <p>Four units of the <abbr title="National Park Service">NPS</abbr> in Colorado carry
+    full national park designation.</p>
+
+  <nav aria-label="Sections of this page">
+    <h2 class="sr-only">On this page</h2>
+    <ul>
+      <li><a href="#parks">The parks at a glance</a></li>
+      <li><a href="#request">Request a ranger-led tour</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section id="parks">
+    <h2><span class="material-symbols-outlined" aria-hidden="true">park</span> The parks at a glance</h2>
+
+    <p>Mesa Verde came first, on <time datetime="1906-06-29">June 29, 1906</time>, the
+      first national park created to protect works of human hands rather than scenery.
+      Black Canyon of the Gunnison and Great Sand Dunes were promoted from national
+      monument status far more recently.</p>
+
+    <table>
+      <caption>Colorado national parks by size and visitation</caption>
+      <thead>
+        <tr>
+          <th scope="col">Park</th>
+          <th scope="col">Established</th>
+          <th scope="col">Area (acres)</th>
+          <th scope="col">Recreation visits</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Rocky Mountain</th>
+          <td><time datetime="1915-01-26">Jan 26, 1915</time></td>
+          <td class="num"><data value="265461">265,461</data></td>
+          <td class="num"><data value="4171431">4,171,431</data> (2025)</td>
+        </tr>
+        <tr>
+          <th scope="row">Mesa Verde</th>
+          <td><time datetime="1906-06-29">Jun 29, 1906</time></td>
+          <td class="num"><data value="52485">52,485</data></td>
+          <td class="num"><data value="548477">548,477</data> (2021)</td>
+        </tr>
+        <tr>
+          <th scope="row">Great Sand Dunes</th>
+          <td><time datetime="2004-09-24">Sep 24, 2004</time></td>
+          <td class="num"><data value="149028">149,028</data></td>
+          <td class="num"><data value="432498">432,498</data> (2025)</td>
+        </tr>
+        <tr>
+          <th scope="row">Black Canyon of the Gunnison</th>
+          <td><time datetime="1999-10-21">Oct 21, 1999</time></td>
+          <td class="num"><data value="30750">30,750</data></td>
+          <td class="num"><data value="357069">357,069</data> (2023)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <details>
+      <summary>About these figures</summary>
+      <p>A <dfn>recreation visit</dfn> is one person entering a park for recreational
+        purposes, so a single traveler generates several across a multi-day trip.
+        Visitation years differ because each park's most recently published count does.
+        Great Sand Dunes acreage covers the national park and preserve together.</p>
+    </details>
+  </section>
+
+  <section id="request">
+    <h2><span class="material-symbols-outlined" aria-hidden="true">confirmation_number</span> Request a ranger-led tour</h2>
+
+    <form method="post" action="#">
+
+      <fieldset>
+        <legend>Your contact details</legend>
+
+        <label for="name">Full name (required)</label>
+        <input id="name" name="name" type="text" autocomplete="name" required>
+
+        <label for="email">Email address (required)</label>
+        <span class="hint" id="email-hint">We reply within three business days.</span>
+        <input id="email" name="email" type="email" autocomplete="email"
+               aria-describedby="email-hint" required>
+
+        <label for="phone">Phone number</label>
+        <input id="phone" name="phone" type="tel" autocomplete="tel">
+      </fieldset>
+
+      <fieldset>
+        <legend>Your trip</legend>
+
+        <label for="park">Park (required)</label>
+        <select id="park" name="park" required>
+          <option value="">Choose a park</option>
+          <option value="romo">Rocky Mountain</option>
+          <option value="meve">Mesa Verde</option>
+          <option value="grsa">Great Sand Dunes</option>
+          <option value="blca">Black Canyon of the Gunnison</option>
+        </select>
+
+        <label for="visit-date">Preferred date (required)</label>
+        <span class="hint" id="date-hint">Tours run April through October.</span>
+        <input id="visit-date" name="visit-date" type="date" min="2027-04-01"
+               max="2027-10-31" aria-describedby="date-hint" required>
+
+        <label for="party">People in your party (required)</label>
+        <span class="hint" id="party-hint">Between 1 and 10.</span>
+        <input id="party" name="party" type="number" min="1" max="10" value="2"
+               aria-describedby="party-hint" required>
+      </fieldset>
+
+      <fieldset class="choice">
+        <legend>How should we reach you?</legend>
+        <p>
+          <input id="by-email" name="contact" type="radio" value="email" checked>
+          <label for="by-email">Email</label>
+        </p>
+        <p>
+          <input id="by-phone" name="contact" type="radio" value="phone">
+          <label for="by-phone">Phone call</label>
+        </p>
+      </fieldset>
+
+      <fieldset class="choice">
+        <legend>Accessibility needs</legend>
+        <p>
+          <input id="step-free" name="access" type="checkbox" value="step-free">
+          <label for="step-free">Step-free route, no ladders</label>
+        </p>
+        <p>
+          <input id="asl" name="access" type="checkbox" value="asl">
+          <label for="asl">American Sign Language interpreter</label>
+        </p>
+      </fieldset>
+
+      <label for="notes">Anything else we should know?</label>
+      <textarea id="notes" name="notes" rows="4"></textarea>
+
+      <button type="submit">
+        <span class="material-symbols-outlined" aria-hidden="true">send</span>
+        Send request
+      </button>
+    </form>
+  </section>
+
+</main>
+
+<footer>
+  <p>Built by Aidan Coughlin. <a href="../index.html">Back to class portal</a></p>
+</footer>
+
+</body>
+</html>
